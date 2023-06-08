@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            }
+
+            .input-box input[type="date"] {
+                width: 150px; 
+                height: 50px; 
+            }
+
+            .input-box .small-input {
+                width: 150px; 
+                background-color:rgba(201, 76, 76, 0.3);
+                
+            
+            }
+            .input-box .ss {
+                width: 150px; 
+                position: relative; 
+                background-color: darkseagreen;
+                right: 5px;
+            }
+            .input-box .sv {
+            width: 150px; 
+            position: relative; 
+            background-color: rgb(228, 112, 112);
+            right: 5px;
+            }
+            .input-box .sj {
+            width: 150px; 
+            position: relative; 
+            background-color: darkgrey;
+            right: 5px;
+            }
+            .input-box .sm {
+            width: 150px; 
+            position: relative; 
+            background-color: cadetblue;
+            right: 5px;
+            }
+            .input-box .sn {
+                width: 310px; 
+                position: relative; 
+                right: 8px;
+                
+            }
+
+            body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgb(130, 106, 251);
+            }
+            .container {
+            position: relative;
+            max-width: 700px;
+            width: 100%;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            }
+            .container header {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: 500;
+            text-align: center;
+            }
+            .container .form {
+            margin-top: 30px;
+            }
+            .form .input-box {
+            width: 50%;
+            margin-top: 20px;
+            }
+
+
+            .input-box label {
+            color: #333;
+
+            }
+            .form :where(.input-box input, .select-box) {
+            position: relative;
+            height: 50px;
+            width: 100%;
+            outline: none;
+            font-size: 1rem;
+            color: #707070;
+            margin-top: 8px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 0 15px;
+            }
+            .input-box input:focus {
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+            }
+            .form .column {
+            display: flex;
+            column-gap: 10px;
+            }
+
+            .select-box select {
+            height: 100%;
+            width: 100%;
+            outline: none;
+            border: none;
+            color: #707070;
+            font-size: 1rem;
+            }
+            .form button {
+            height: 55px;
+            width: 100%;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 30px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: rgb(130, 106, 251);
+            }
+            .form button:hover {
+            background: rgb(88, 56, 250);
+            }
+            /*Responsive*/
+            @media screen and (max-width: 500px) {
+            .form .column {
+                flex-wrap: wrap;
+            }
+            .form :where(.gender-option, .gender) {
+                row-gap: 15px;
+            }
+            }
+
+            table, th, td {
+            border:1px solid black;
+            height: 50PX;
+            border-radius: 6px;
+            border: 1px solid #707070;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+            }
+            
+
+            #di{
+            background:rgba(201, 76, 76, 0.3);
+            width: 150px;
+            border-radius: 6px;
+
+            }
+            #dip{
+            background:rgba(201, 76, 76, 0.3);
+            width: 100px;
+            border-radius: 6px;
+            height: 40px;
+
+            }
+            #pd{
+            background-color:  darkseagreen;
+            width: 80px;
+            height: 50px;
+            }
+            #pd1{
+            background-color:rgb(228, 112, 112);
+            width: 80px;
+            }
+            #pd2{
+            background-color: darkgrey;
+            width: 80px;
+            }
+            #pd3{
+            background-color:cadetblue;
+            width: 80px;
+            }
+        
+</style>
+    </head>
+    <body>
+       
+        <section class="container">
+            <form action="#" class="form">
+              <div class="input-box">
+                <input type="date" id="da"  placeholder="Date" required />  <h3>Shift2</h3>
+              </div>
+            
+              <div class = "input-box address">
+                <div class = "column">
+                    <input type="text" placeholder="Location/Machine No." />
+                    <div class = "select-box">
+                      <select onchange="location = this.value;">
+                        <option hidden>Shift</option>
+                        <option value="index.html">Shift 1</option>
+                        <option value="Shift2.html">Shift 2</option>
+                        <option value="shift3.html">Shift 3</option>
+                      </select> 
+                    </div>
+                 </div>
+            </div>
+             
+              <div class="column">
+                  <div class="input-box">
+                    <input type="text" class="small-input" placeholder="N.ID" required />
+                  </div>
+                  <div class="input-box">
+                    <input type="text" class="ss" placeholder="Product" required />
+                  </div>
+                  <div class="input-box">
+                    <input type="number"  class="sn"  placeholder="IP1" required />
+                  </div>
+                </div>
+      
+                <div class="column">
+                  <div class="input-box">
+                    <input type="text" class="small-input" placeholder="N.ID" required />
+                  </div>
+                  <div class="input-box">
+                    <input type="text" class="sv" placeholder="Product" required />
+                  </div>
+                  <div class="input-box">
+                    <input type="number"  class="sn"  placeholder="IP1" required />
+                  </div>
+                </div>
+      
+                <div class="column">
+                  <div class="input-box">
+                    <input type="text" class="small-input" placeholder="N.ID" required />
+                  </div>
+                  <div class="input-box">
+                    <input type="text" class="sj" placeholder="Product" required />
+                  </div>
+                  <div class="input-box">
+                    <input type="number"  class="sn"  placeholder="IP1" required />
+                  </div>
+                </div>
+      
+                <div class="column">
+                  <div class="input-box">
+                    <input type="text" class="small-input" placeholder="N.ID" required />
+                  </div>
+                  <div class="input-box">
+                    <input type="text" class="sm" placeholder="Product" required />
+                  </div>
+                  <div class="input-box">
+                    <input type="number"  class="sn"  placeholder="IP1" required />
+                  </div>
+                </div>
+      
+              
+                <div class="column">
+                  <div class="input-box">
+                  <input type="text" placeholder="Location/Machine No." required />
+                  </div>
+                  
+                  </div>
+                 
+                  <div class="column">
+                      <div class="input-box">
+                        <input type="text" class="small-input" placeholder="N.ID" required />
+                      </div>
+                      <div class="input-box">
+                        <input type="text" class="ss" placeholder="Product" required />
+                      </div>
+                      <div class="input-box">
+                        <input type="number"  class="sn"  placeholder="IP1" required />
+                      </div>
+                    </div>
+          
+                    <div class="column">
+                      <div class="input-box">
+                        <input type="number" class="small-input" placeholder="N.ID" required />
+                      </div>
+                      <div class="input-box">
+                        <input type="text" class="sv" placeholder="Product" required />
+                      </div>
+                      <div class="input-box">
+                        <input type="text"  class="sn"  placeholder="IP1" required />
+                      </div>
+                    </div>
+          
+                    <div class="column">
+                      <div class="input-box">
+                        <input type="number" class="small-input" placeholder="N.ID" required />
+                      </div>
+                      <div class="input-box">
+                        <input type="text" class="sj" placeholder="Product" required />
+                      </div>
+                      <div class="input-box">
+                        <input type="text"  class="sn"  placeholder="IP1" required />
+                      </div>
+                    </div>
+          
+                    <div class="column">
+                      <div class="input-box">
+                        <input type="number" class="small-input" placeholder="N.ID" required />
+                      </div>
+                      <div class="input-box">
+                        <input type="text" class="sm" placeholder="Product" required />
+                      </div>
+                      <div class="input-box">
+                        <input type="text"  class="sn"  placeholder="IP1" required />
+                      </div>
+                    </div>
+      
+                   <BR><BR>
+                    <table style="width:100%">
+                      <tr>
+                          <th colspan="2"></th>
+                          <th id="di">Dip</th>
+                          <th id="di">Water Dip</th>
+                          <th id="di">Stock</th>
+                         
+                      </tr>
+                    <tr>
+                      <td id="pd" rowspan="2">Product</th>
+                      <td rowspan="2"><input type="text" id="dip" value="Tank1"><BR><input type="text" id="dip" value="Tank2"></td>
+                      <td>IP2</td>
+                      <td>IP3</td>
+                      <td>CAL1</td>
+                      
+                      
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+      
+                    <tr>
+                      <td id="pd1" rowspan="2">Product</th>
+                      <td  rowspan="2"><input type="text" id="dip" value="Tank1"><BR><input type="text" id="dip" value="Tank2"></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      
+                      
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+      
+                    <tr>
+                      <td id="pd2" rowspan="2">Product</th>
+                      <td  rowspan="2"><input type="text" id="dip" value="Tank1"><BR><input type="text"  id="dip" value="Tank2"></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      
+                      
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+      
+                    <tr>
+                      <td id="pd3" rowspan="2">Product</th>
+                      <td rowspan="2"><input type="text" id="dip" value="Tank1"><BR><input type="text" id="dip" value="Tank2"></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      
+                      
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+      
+                  </table>
+             
+                  
+              
+             
+      
+            
+              <button>Submit</button>
+            </form>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
